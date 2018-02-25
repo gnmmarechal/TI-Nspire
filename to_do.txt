@@ -1,6 +1,6 @@
 Before beta 1
 -------------
-Make download page with license, howto
+Make download page with license, howto (which will just be critor's tutorial with credit, and mirrors of the files)
 
 Beta 2
 ------
@@ -11,13 +11,13 @@ fix overclock, Add overclock in boot2upd patch
 
 Beta 3
 ------
-Actual anti downgrade patch in boot2, (aa c6 8c 92?)
+Actual anti downgrade patch in boot2 as well as OS, (aa c6 8c 92?)
 Also fix 10 into 0F with manuf patch in ALL oses, and add ALL asic patch in 3.6 so can update os
 
 1.0
 ---
 New patcher fix Product ID to be the real one
-Somehow don't let 3.6 on STUV
+Somehow don't let 3.6 run on STUV
 add refresh_osscr in nmaker
 
 Other projects

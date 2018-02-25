@@ -1,0 +1,45 @@
+HOST_GCC = gcc
+GCC = arm-none-eabi-gcc
+LD  = arm-none-eabi-ld
+GCCFLAGS = -Os -Wall -Wextra -Werror -Wno-attributes -marm -mcpu=arm926ej-s -s -fPIE -ffreestanding -std=gnu1x -DTOUCHPAD_FIX
+LDFLAGS  = -nostdlib -nostartfiles -e nlaunch -PIE -T ldscript
+OBJCOPY  = arm-none-eabi-objcopy
+TNCN = nlaunch_CLASSIC_TOUCHPAD_FIX.tns
+TNCP = preloader_CLASSIC_TOUCHPAD_FIX.tns
+CFILES    = nlaunch.c patch.c patch_other.c ndless.c
+HFILES    = nlaunch.h boot2.h
+BUILDTNCO = buildtnco
+
+all: CLASSIC_TOUCHPAD_FIX clean
+
+CLASSIC_TOUCHPAD_FIX: ../CLASSIC_TOUCHPAD_FIX/nlaunch.tnc ../CLASSIC_TOUCHPAD_FIX/nlaunch.tno ../CLASSIC_TOUCHPAD_FIX/nlaunch.tns
+
+../CLASSIC_TOUCHPAD_FIX/nlaunch.tnc: $(TNCN) $(TNCP) $(BUILDTNCO)
+	./$(BUILDTNCO) -clr $(TNCN) $(TNCP) $@
+
+../CLASSIC_TOUCHPAD_FIX/nlaunch.tno: $(TNCN) $(TNCP) $(BUILDTNCO)
+	./$(BUILDTNCO) -clr $(TNCN) $(TNCP) $@
+
+../CLASSIC_TOUCHPAD_FIX/nlaunch.tns: $(TNCN) $(TNCP) $(BUILDTNCO)
+	./$(BUILDTNCO) -clr $(TNCN) $(TNCP) $@
+
+nlaunch_CLASSIC_TOUCHPAD_FIX.o: $(CFILES) $(HFILES)
+	$(GCC) $(GCCFLAGS) -o $@ -c $<
+
+preloader_CLASSIC_TOUCHPAD_FIX.o: preloader.c $(HFILES)
+	$(GCC) $(GCCFLAGS) -o $@ -c $<
+
+$(TNCN): nlaunch_CLASSIC_TOUCHPAD_FIX.o
+	$(LD) $(LDFLAGS) $^ -o $(@:.tns=.elf)
+	$(OBJCOPY) -O binary   $(@:.tns=.elf) $@
+
+$(TNCP): preloader_CLASSIC_TOUCHPAD_FIX.o
+	$(LD) $(LDFLAGS) $^ -o $(@:.tns=.elf)
+	$(OBJCOPY) -O binary   $(@:.tns=.elf) $@
+
+$(BUILDTNCO): buildtnco.c
+	$(HOST_GCC) -Wall -Wextra -Werror -Os -s -o $@ $<
+
+clean:
+	rm -f *.o *.elf *.tns
+	rm -f $(BUILDTNCO)

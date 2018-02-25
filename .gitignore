@@ -1,0 +1,6 @@
+*.class
+*.idb
+*.elf
+*.o
+
+tools/imgdump

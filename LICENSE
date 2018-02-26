@@ -7,8 +7,6 @@ You MAY NOT use, advertise, or otherwise mention this code, or any derivative of
   - Enabling access to an unofficial program loader such as Ndless in exam mode
 * Hiding or obscuring in any way the fact that the CAS operating system is running on a non-CAS calculator, including but not limited to:
   - Removing the word "CAS" from the home screen and the HOME > Settings > Status screen
-* Hiding or obscuring in any way that an unofficial program loader such as Ndless is installed, including but not limited to:
-  - Removing the "Ndless installed!" text from the home screen
 
 All derivatives of the code in the "boot1.5_exploit" folder MUST do the following at every boot:
 * If a CAS OS is running on a non-CAS calculator, display the unmodified image contained in "caswarning.h" for no less than five seconds. (Modification of the image is allowed for translating the text in the image to other languages.)

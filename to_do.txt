@@ -6,18 +6,20 @@ Beta 2
 ------
 show a message instead of red screen, and a different message for CR4
 add non-CAS on CAS
+aa c6 8c 92 downgrade patch only in boot2
 Don't compile os patches for cas if noncas and vice versa
 fix overclock, Add overclock in boot2upd patch
 
 Beta 3
 ------
-Actual anti downgrade patch in boot2 as well as OS, (aa c6 8c 92?)
+Actual anti downgrade patch in OS
 Also fix 10 into 0F with manuf patch in ALL oses, and add ALL asic patch in 3.6 so can update os
 
 1.0
 ---
 New patcher fix Product ID to be the real one
 Somehow don't let 3.6 run on STUV
+can insert 2 different boot images and when you type 2 on boot it will load the 2nd one. This could include Linux
 add refresh_osscr in nmaker
 
 Other projects

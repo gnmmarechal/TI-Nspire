@@ -169,10 +169,10 @@ static __attribute__((always_inline)) void patch_CAS_3_9_0_46x_extra(void) {
 		put_word(0x100C0719+0x48B,0x00010105); // CAS ASIC byte #1
 		put_byte(0x100C0719,0x54);
 		put_word(0x100C0719+0x1B,0);
+            // fake as product ID (0x804) 0C. it is close to the touchpad 806 patch
+            put_word(0x100c131c, 0xE3A0000C); // FIXME: port to other OSes
 	}
     put_word(0xA4012EB4, 0x03010083); // 3.0.1.131
-    // fake as product ID (0x804) 0C. it is close to the touchpad 806 patch
-    put_word(0x100c131c, 0xE3A0000C); // FIXME: port to other OSes
 #ifdef TOUCHPAD_FIX // FIXME: port to other OSes
 	// Scale 310 units = 1 volt
 	// A value from 0 to 20 indicates normal TI-Nspire keypad.
@@ -184,7 +184,6 @@ static __attribute__((always_inline)) void patch_CAS_3_9_0_46x_extra(void) {
     put_word(0x100CDDA8,0xE3A04034); // 34 is the fake adc value (=52 dec=SimpKey/EVT)
 	// FIXME: ndless won't work with ID 3
 #else
-	put_word(0x100CDDA8,0xE3A04049); // 49 is the fake adc value (=73 dec=TP)
 #endif
     // manuf revision 0x806 = 2 - without this, it doesn't even check the ADC, just hardcodes clickpad
 	// ldr lr, =0x806 / ldr r1, =0x804

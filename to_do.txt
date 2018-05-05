@@ -1,10 +1,10 @@
 Beta 2
 ------
-test downgrade patch
+test downgrade patch in boot2 to not mess up ptt
 show a message instead of red screen, and a different message for 3.6 CR4
 add non-CAS on CAS
 Don't compile os patches for cas if noncas and vice versa
-[critor] add refresh_osscr in nmaker. REMEMBER to upload new nMaker in github
+[critor] add refresh_osscr in nmaker, check that valid JBOOT2 image. REMEMBER to upload new nMaker in github
 add 3.9.1
 add languages patch for noncas, and for 3.6
 pixel fix
@@ -21,7 +21,7 @@ Manifest patch
 
 1.0
 ---
-New patcher fix Product ID to be the real one
+fix Product ID to be the real one
 can insert 2 different boot images and when you type 2 on boot it will load the 2nd one. This could include Linux, maybe also add diags
 
 After 1.0

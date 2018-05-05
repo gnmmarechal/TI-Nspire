@@ -5,9 +5,7 @@ add non-CAS on CAS
 Don't compile os patches for cas if noncas and vice versa
 [critor] add refresh_osscr in nmaker, check that valid JBOOT2 image. REMEMBER to upload new nMaker in github
 add 3.9.1
-add languages patch for noncas, and for 3.6
 pixel fix
-add note that 3.6 can't run on stuv
 3.2.4
 3.3 (for Arabic)
 

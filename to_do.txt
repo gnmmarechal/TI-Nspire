@@ -1,30 +1,34 @@
-Before beta 1
--------------
-Make download page with license, howto (which will just be critor's tutorial with credit, and mirrors of the files)
-
 Beta 2
 ------
-show a message instead of red screen, and a different message for CR4
+test downgrade patch
+show a message instead of red screen, and a different message for 3.6 CR4
 add non-CAS on CAS
-aa c6 8c 92 downgrade patch only in boot2
 Don't compile os patches for cas if noncas and vice versa
-fix overclock, Add overclock in boot2upd patch
+[critor] add refresh_osscr in nmaker. REMEMBER to upload new nMaker in github
+add 3.9.1
+add languages patch for noncas, and for 3.6
+pixel fix
+add note that 3.6 can't run on stuv
+3.2.4
+3.3 (for Arabic)
 
 Beta 3
 ------
 Actual anti downgrade patch in OS
 Also fix 10 into 0F with manuf patch in ALL oses, and add ALL asic patch in 3.6 so can update os
+fix overclock, Add overclock in boot2upd patch
+Manifest patch
 
 1.0
 ---
 New patcher fix Product ID to be the real one
-Somehow don't let 3.6 run on STUV
-can insert 2 different boot images and when you type 2 on boot it will load the 2nd one. This could include Linux
-add refresh_osscr in nmaker
+can insert 2 different boot images and when you type 2 on boot it will load the 2nd one. This could include Linux, maybe also add diags
+
+After 1.0
+---------
+Somehow don't let 3.6 run on STUV?
 
 Other projects
 --------------
 add readme for each section of repo
-On my nlaunchy also fix Product ID, add all overclock, fake 0c/0e the rest 
-add force touchpad type for noncas?
-maybe an nlaunch cxm with 3.6 for cm
+On my nlaunchy also fix Product ID

@@ -1,6 +1,5 @@
 Beta 2
 ------
-test downgrade patch in boot2 to not mess up ptt
 show a message instead of red screen, and a different message for 3.6 CR4
 add non-CAS on CAS
 Don't compile os patches for cas if noncas and vice versa

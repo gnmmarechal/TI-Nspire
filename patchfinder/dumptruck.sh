@@ -13,7 +13,7 @@ echo "Dumping OS..."
 b15e="$(dirname "$0")/../boot1.5_exploit"
 rm -f os.bin cut.bin *.class
 echo "Press I on the emulated calculator's keyboard when prompted."
-cat << 'EOF' | wine "$(dirname "$0")/../nspire_emu.exe" /1="$b15e/Boot1CX.img" /R /N /PB="$b15e/tinspirecx_boot2_4.0.3.49.img.tns" /PO="$1" "$m" /D >/dev/null 2>&1
+cat << 'EOF' | wine "$(dirname "$0")/../nspire_emu.exe" /1="$b15e/Boot1CX.img" /R /N /PB="$b15e/tinspirecx_boot2_4.4.0.8.img.tns" /PO="$1" "$m" /D >/dev/null 2>&1
 k 10000000
 c
 wm os.bin 10000000 2000000

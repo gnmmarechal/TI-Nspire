@@ -173,8 +173,7 @@ static __attribute__((always_inline)) void patch_CAS_3_9_0_46x_extra(void) {
             put_word(0x100c131c, 0xE3A0000C); // FIXME: port to other OSes
 	}
     put_word(0xA4012EB4, 0x03010083); // 3.0.1.131
-#ifdef TOUCHPAD_FIX // FIXME: port to other OSes
-#ifdef TPEVT1
+#ifdef TPEVT1 // FIXME: port to other OSes
     // Scale 310 units = 1 volt
     // A value from 0 to 20 indicates normal TI-Nspire keypad.
     // A value from 21 to 42 indicates TI-84+ keypad.
@@ -183,7 +182,6 @@ static __attribute__((always_inline)) void patch_CAS_3_9_0_46x_extra(void) {
     // adc - look for c4000120 and then +0x10 relative, change the +0x10 load to hardcode 52
     put_word(0x100CDDA8,0xE3A04034); // 34 is the fake adc value (=52 dec=SimpKey/EVT)
 	// FIXME: ndless won't work with ID 3
-#endif
     // manuf revision 0x806 = 2 - without this, it doesn't even check the ADC, just hardcodes clickpad
 	// ldr lr, =0x806 / ldr r1, =0x804
     // and then later, ldrh r12, [r5,lr]

@@ -10,7 +10,7 @@ public class Find900a0000 {
 		private int ctr = 0;
 		private boolean usecache = false;
 		private Scanner sc;
-		ArrayList<String> lines = new ArrayList<String>();
+		private ArrayList<String> lines = new ArrayList<String>();
 		public CachedScanner(Scanner sc) {
 			this.sc = sc;
 		}

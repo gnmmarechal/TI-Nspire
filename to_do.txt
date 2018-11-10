@@ -1,16 +1,18 @@
 1.0
 ---
-show a message instead of red screen, and a different message for 3.6 CR4
-[critor] add refresh_osscr in nmaker, check that valid JBOOT2 image. REMEMBER to upload new nMaker in github
-3.3 incl noncas (for nswitchos for arabic)
+my html5 nmaker
 pixel fix
-Also fix 10 into 0F with manuf patch in ALL oses, and add ALL asic patch in 3.6 so can update os
-show nloader version on error message, and if hold ^ on boot
+fix 10 into 0F with manuf patch in ALL oses, and add ALL asic patch in 3.6 so can update os
+nloader version image fields
 MERGE MASTER
 Fake appropriate boot2 version each OS
 clean up repo completely
-optimize memcpy
 move around code more
+make smaller size, not empty space, why does it freeze?
+license change to reflect new casimage
+error image for 3.6 cr4 & unsupp?
+show nloader ver?
+cr4 checks out of loops in screen.c
 
 1.1
 ---

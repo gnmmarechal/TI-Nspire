@@ -11,7 +11,8 @@ move around code more
 make smaller size, not empty space, why does it freeze?
 license change to reflect new casimage
 error image for 3.6 cr4 & unsupp?
-Fix cr4 casimage to write to the boot2 internal buffer! (check it by reading where it writes to c0000010)
+Fix cr4 casimage to write to the boot2 internal buffer! (check it by reading where it writes to c0000010) 
+try to make it show immediately when the exploit runs, too
 
 1.1
 ---

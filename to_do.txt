@@ -4,15 +4,14 @@ my html5 nmaker
 pixel fix
 fix 10 into 0F with manuf patch in ALL oses, and add ALL asic patch in 3.6 so can update os
 nloader version image fields
-MERGE MASTER
+MERGE MASTER https://github.com/parrotgeek1/TI-Nspire/compare/testing...master
 Fake appropriate boot2 version each OS
-clean up repo completely
+clean up repo completely, fix link!
 move around code more
 make smaller size, not empty space, why does it freeze?
 license change to reflect new casimage
 error image for 3.6 cr4 & unsupp?
-show nloader ver?
-cr4 checks out of loops in screen.c
+Fix cr4 casimage to write to the boot2 internal buffer! (check it by reading where it writes to c0000010)
 
 1.1
 ---

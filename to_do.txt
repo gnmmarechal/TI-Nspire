@@ -5,14 +5,10 @@ pixel fix
 fix 10 into 0F with manuf patch in ALL oses, and add ALL asic patch in 3.6 so can update os
 nloader version image fields
 MERGE MASTER https://github.com/parrotgeek1/TI-Nspire/compare/testing...master
-Fake appropriate boot2 version each OS
 clean up repo completely, fix link!
-move around code more
 make smaller size, not empty space, why does it freeze?
-license change to reflect new casimage
 error image for 3.6 cr4 & unsupp?
-Fix cr4 casimage to write to the boot2 internal buffer! (check it by reading where it writes to c0000010) 
-try to make it show immediately when the exploit runs, too
+Revert to original cas image code
 
 1.1
 ---
